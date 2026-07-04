@@ -53,6 +53,16 @@ div[data-testid="stMetric"]{
 </style>
 """, unsafe_allow_html=True)
 
+pagina = st.sidebar.selectbox(
+    "Selecciona una sección",
+    [
+        "🏠 Inicio",
+        "🧹 Limpieza de datos",
+        "📊 Visualizaciones",
+        "💡 Conclusiones"
+    ]
+)
+
 if pagina == "🏠 Inicio":
     st.header("🎯 Objetivo del proyecto")
 
@@ -90,16 +100,6 @@ def cargar_datos():
     return df
 
 df = cargar_datos()
-
-pagina = st.sidebar.selectbox(
-    "Selecciona una sección",
-    [
-        "🏠 Inicio",
-        "🧹 Limpieza de datos",
-        "📊 Visualizaciones",
-        "💡 Conclusiones"
-    ]
-)
 
 # Completar valores nulos solo si la columna existe
 columnas_numericas = [
