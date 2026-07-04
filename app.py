@@ -184,7 +184,8 @@ if pagina == "Inicio":
     """)
 
 
-elif pagina == "Limpieza de datos":
+elif pagina == "🧹 Limpieza de datos":
+    
     st.header("Limpieza y preparación de datos")
 
     st.write("""
@@ -230,7 +231,7 @@ elif pagina == "Limpieza de datos":
 
     st.success("La base de datos quedó preparada para el análisis y la visualización.")
 
-elif pagina == "Visualizaciones":
+elif pagina == "📊 Visualizaciones":
     st.header("Visualizaciones del dashboard")
 
     st.write("""
@@ -386,7 +387,7 @@ elif pagina == "Visualizaciones":
         st.warning("La columna nombre_carrera no está disponible en la base.")
 
 
-elif pagina == "Conclusiones":
+elif pagina == "💡 Conclusiones":
 
     st.subheader("Conclusiones")
 
