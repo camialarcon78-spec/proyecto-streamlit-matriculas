@@ -83,9 +83,9 @@ with col2:
 def cargar_datos():
     df = pd.read_csv(
         "Matricula_2007_2025_WEB_15_07_2025 (1)(1).csv",
-        sep=None,
-        engine="python",
+        sep=";",
         encoding="utf-8-sig",
+        low_memory=False
     )
     return df
 
