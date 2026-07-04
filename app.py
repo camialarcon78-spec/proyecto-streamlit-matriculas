@@ -82,7 +82,7 @@ with col2:
 @st.cache_data
 def cargar_datos():
     df = pd.read_csv(
-        "Matricula_2007_2025_WEB_15_07_2025 (1).csv",
+        "Matricula_2007_2025_WEB_15_07_2025 (1)(1).csv",
         sep=None,
         engine="python",
         encoding="utf-8-sig",
