@@ -54,31 +54,31 @@ div[data-testid="stMetric"]{
 """, unsafe_allow_html=True)
 
 if pagina == "🏠 Inicio":
-st.header("🎯 Objetivo del proyecto")
+    st.header("🎯 Objetivo del proyecto")
 
-st.write("""
-Este dashboard fue desarrollado con el propósito de analizar la evolución de la matrícula
-en la educación superior chilena entre los años 2007 y 2025.
+    st.write("""
+    Este dashboard fue desarrollado con el propósito de analizar la evolución de la matrícula
+    en la educación superior chilena entre los años 2007 y 2025.
 
-A través de distintas visualizaciones interactivas es posible explorar cómo se distribuye
-la matrícula según variables como género, región, modalidad, jornada y carrera,
-facilitando la comprensión de tendencias relevantes y apoyando la toma de decisiones
-basadas en datos.
-""")
+    A través de distintas visualizaciones interactivas es posible explorar cómo se distribuye
+    la matrícula según variables como género, región, modalidad, jornada y carrera,
+    facilitando la comprensión de tendencias relevantes y apoyando la toma de decisiones
+    basadas en datos.
+    """)
 
-st.header("📊 ¿Qué encontrarás en este dashboard?")
+    st.header("📊 ¿Qué encontrarás en este dashboard?")
 
-col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
-with col1:
-    st.success("🧹 Limpieza de datos")
-    st.success("📊 Indicadores principales")
-    st.success("📈 Gráficos interactivos")
+    with col1:
+        st.success("🧹 Limpieza de datos")
+        st.success("📊 Indicadores principales")
+        st.success("📈 Gráficos interactivos")
 
-with col2:
-    st.success("🌎 Análisis por región")
-    st.success("🎓 Información de carreras")
-    st.success("💡 Conclusiones e insights")
+    with col2:
+        st.success("🌎 Análisis por región")
+        st.success("🎓 Información de carreras")
+        st.success("💡 Conclusiones e insights")
 
 @st.cache_data
 def cargar_datos():
