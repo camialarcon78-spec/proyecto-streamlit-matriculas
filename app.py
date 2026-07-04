@@ -53,6 +53,7 @@ div[data-testid="stMetric"]{
 </style>
 """, unsafe_allow_html=True)
 
+if pagina == "🏠 Inicio":
 st.header("🎯 Objetivo del proyecto")
 
 st.write("""
