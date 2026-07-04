@@ -82,32 +82,29 @@ with col2:
 @st.cache_data
 def cargar_datos():
     df = pd.read_csv(
-        "Matricula_2007_2025_WEB_15_07_2025 (1).csv",
-        sep=";",
-        encoding="latin-1",
+        "Matricula_2007_2025_WEB_15_07_2025 (1)(1).csv",
+        sep=None,
+        engine="python",
+        encoding="utf-8-sig",
         low_memory=False
     )
     return df
 
-pagina = st.sidebar.selectbox(
-    "Selecciona una sección",
-    [
-        "🏠 Inicio",
-        "🧹 Limpieza de datos",
-        "📊 Visualizaciones",
-        "💡 Conclusiones"
-    ]
-)
-
 df = cargar_datos()
 
+# Completar valores nulos solo si la columna existe
+columnas_numericas = [
+    "TOTAL MATRÍCULA",
+    "TOTAL MATRÍCULA MUJERES",
+    "TOTAL MATRÍCULA HOMBRES",
+    "TOTAL MATRÍCULA PRIMER AÑO",
+    "TOTAL MATRÍCULA MUJERES PRIMER AÑO",
+    "TOTAL MATRÍCULA HOMBRES PRIMER AÑO"
+]
 
-
-# Completar valores nulos
-df["TOTAL MATRÍCULA MUJERES"] = df["TOTAL MATRÍCULA MUJERES"].fillna(0)
-df["TOTAL MATRÍCULA HOMBRES"] = df["TOTAL MATRÍCULA HOMBRES"].fillna(0)
-df["TOTAL MATRÍCULA NO BINARIOS O INDEFINIDOS"] = df["TOTAL MATRÍCULA NO BINARIOS O INDEFINIDOS"].fillna(0)
-df["TOTAL MATRÍCULA PRIMER AÑO"] = df["TOTAL MATRÍCULA PRIMER AÑO"].fillna(0)
+for columna in columnas_numericas:
+    if columna in df.columns:
+        df[columna] = df[columna].fillna(0)
 
 # Renombrar columnas
 df.rename(columns={
