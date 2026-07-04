@@ -86,7 +86,6 @@ def cargar_datos():
         sep=None,
         engine="python",
         encoding="utf-8-sig",
-        low_memory=False
     )
     return df
 
