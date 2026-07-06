@@ -68,7 +68,7 @@ if pagina == "🏠 Inicio":
 
     st.write("""
     Este dashboard fue desarrollado con el propósito de analizar la evolución de la matrícula
-    en la educación superior chilena entre los años 2007 y 2025.
+    en la educación superior chilena entre los años 2017 y 2025.
 
     A través de distintas visualizaciones interactivas es posible explorar cómo se distribuye
     la matrícula según variables como género, región, modalidad, jornada y carrera,
